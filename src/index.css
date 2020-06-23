@@ -1,16 +1,46 @@
+@import-normalize;
+
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 :root[data-theme='dark'] {
   --text-color: #f0F0F0;
   --color-primary: #0A0A0A;
-  --color-secondary: #0A0A0A;
+  --color-secondary: rgba(230, 230, 255, 0.07);
 }
 
 :root[data-theme='light'] {
   --text-color: #111111;
   --color-primary: #FAFAFA;
-  --color-secondary: #0A0A0A;
+  --color-secondary:rgba(0, 0, 0, 0.04);
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans'), url(./assets/fonts/OpenSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), url(./assets/fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans'), url(./assets/fonts/OpenSans-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Sriracha';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sriracha'), url(./assets/fonts/Sriracha-Regular.ttf) format('truetype');
 }
