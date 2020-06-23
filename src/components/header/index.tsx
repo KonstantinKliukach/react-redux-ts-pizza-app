@@ -1,9 +1,12 @@
 import React from 'react';
-import { Flex } from 'rebass';
+import { Flex, Box } from 'rebass';
 
 import useTheme from 'hooks/useTheme';
 
 import Logo from './logo';
+import User from './user';
+import Cart from './cart';
+import ThemeSwitcher from './themeSwitcher';
 
 const Header: React.FC = () => {
   // eslint-disable-next-line no-empty-pattern
@@ -16,8 +19,14 @@ const Header: React.FC = () => {
       justifyContent='space-between'
     >
       <Logo />
-      <Flex>
-        nya
+      <Flex alignItems='center'>
+        <ThemeSwitcher />
+        <Box ml='12px'>
+          <Cart />
+        </Box>
+        <Box ml='12px'>
+          <User />
+        </Box>
       </Flex>
     </Flex>
   );

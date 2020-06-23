@@ -3,8 +3,8 @@ import { Reducer } from 'redux';
 import { RootState } from 'context/redux/store';
 
 export enum Theme {
-  Light = 'light',
-  Dark = 'dark'
+  light = 'light',
+  dark = 'dark'
 }
 
 interface ThemeState {
@@ -12,10 +12,10 @@ interface ThemeState {
 }
 
 const initialState: ThemeState = {
-  theme: Theme.Light,
+  theme: Theme.light,
 };
 
-export const getThemetate = (rootState: RootState): ThemeState => (rootState.theme);
+export const getThemeState = (rootState: RootState): ThemeState => (rootState.theme);
 
 const reducer: Reducer<
   ThemeState, SetThemeAction

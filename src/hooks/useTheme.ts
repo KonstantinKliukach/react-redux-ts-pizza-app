@@ -1,6 +1,6 @@
 import { useLayoutEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { getThemetate, Theme } from 'context/redux/reducers/theme';
+import { getThemeState, Theme } from 'context/redux/reducers/theme';
 
 const preferDarkSchema = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -11,7 +11,7 @@ interface ThemeHook {
 }
 
 function useTheme(): ThemeHook {
-  const { theme } = useSelector(getThemetate);
+  const { theme } = useSelector(getThemeState);
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

@@ -25,7 +25,7 @@ const initialState: UserState = {
   user: null,
 };
 
-// const getAuthState = (rootState: RootState): UserState => (rootState.theme);
+export const getAuthState = (rootState: RootState): UserState => (rootState.auth);
 
 const reducer: Reducer<
   UserState, AuthActions
