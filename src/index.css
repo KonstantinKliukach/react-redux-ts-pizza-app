@@ -17,6 +17,11 @@ body {
   --color-secondary:rgba(0, 0, 0, 0.04);
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
