@@ -13,7 +13,7 @@ const User: React.FC = () => {
     >
       <UserPic width={'25px'} height='25px' fillOpacity={1} fill={'var(--text-color)'} />
       <Text fontSize='18px' ml='8px' fontWeight='bold'>
-        {isAuthed && user ? user.email : 'Войти'}
+        {isAuthed && user ? user.email : 'LogIn'}
       </Text>
     </Flex>
   );

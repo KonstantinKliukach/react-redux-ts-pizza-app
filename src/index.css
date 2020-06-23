@@ -9,12 +9,14 @@ body {
   --text-color: #f0F0F0;
   --color-primary: #0A0A0A;
   --color-secondary: rgba(230, 230, 255, 0.07);
+  --color-active: #ff6f22;
 }
 
 :root[data-theme='light'] {
   --text-color: #111111;
   --color-primary: #FAFAFA;
   --color-secondary:rgba(0, 0, 0, 0.04);
+  --color-active: rgb(74, 210, 149);
 }
 
 a {

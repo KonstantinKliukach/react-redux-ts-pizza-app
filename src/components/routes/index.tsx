@@ -4,6 +4,7 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom';
+import Page404 from 'components/404';
 
 const AppRoutes: React.FC = () => (
   <Switch>
@@ -13,10 +14,10 @@ const AppRoutes: React.FC = () => (
     <Route path='/cart'>
       <div>Cart</div>
     </Route>
-    <Route path='/:id'>
+    <Route path='/user/:id'>
       <div>Orders</div>
     </Route>
-    <Redirect to="/" />
+    <Page404 />
   </Switch>
 );
 

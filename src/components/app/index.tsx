@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'rebass';
+import { Flex } from 'rebass';
 
 import AppRoutes from 'components/routes';
 import {
@@ -9,13 +9,13 @@ import Mainlayout from 'layouts/mainLayout';
 import styles from './App.module.css';
 
 const App: React.FC = () => (
-    <Box className={styles.app}>
+    <Flex className={styles.app}>
       <Router>
         <Mainlayout>
           <AppRoutes />
         </Mainlayout>
       </Router>
-    </Box>
+    </Flex>
 );
 
 export default App;
