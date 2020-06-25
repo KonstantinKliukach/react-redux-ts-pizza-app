@@ -17,7 +17,7 @@ const ThemeSwitcher: React.FC = () => {
   };
 
   return (
-    <Box onClick={handleThemeSwitch} sx={{ cursor: 'pointer' }}>
+    <Box onClick={handleThemeSwitch} sx={{ cursor: 'pointer' }} ml='12px'>
       {
         theme === Theme.light
           ? <MoonPic width={'25px'} height='25px' fillOpacity={1} fill={'var(--text-color)'} />

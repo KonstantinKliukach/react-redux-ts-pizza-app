@@ -6,12 +6,16 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import themeReducer from 'context/redux/reducers/theme';
 import authReducer from 'context/redux/reducers/auth';
+import pizzaReducer from 'context/redux/reducers/pizza';
+import currencyReducer from 'context/redux/reducers/currency';
 
 const composeEnhancers = composeWithDevTools({});
 
 const rootReducer = combineReducers({
   theme: themeReducer,
   auth: authReducer,
+  pizza: pizzaReducer,
+  currency: currencyReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

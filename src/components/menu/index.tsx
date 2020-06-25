@@ -50,10 +50,7 @@ const Menu: React.FC = () => {
       as='nav'
       flexDirection='column'
       flexGrow={1}
-      maxWidth={'335px'}
-      sx={{
-        position: 'sticky',
-      }}
+      maxWidth={'235px'}
     >
       {
         menuItems.map((menuItem) => <MenuItem

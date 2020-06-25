@@ -3,41 +3,91 @@
     {
       "id": 1,
       "title": "4 CHEESE",
-      "sizes": [ 20, 30],
-      "description": "",
+      "description": "Tomato sauce, mozzarella and cheddar cheeses, blue cheese and hard cheese",
+      "image": "https://i.imgur.com/cdzHA3w.jpg",
       "vegan": true,
+      "prices": {
+        "20": {
+          "euro": 4.54,
+          "dollar": 5.94
+        },
+        "30": {
+          "euro": 5.83,
+          "dollar": 6.94
+        },
+        "45": {
+          "euro": 7.5,
+          "dollar": 8.41
+        }
+      },
       "hot": false
     },
     {
       "id": 2,
       "title": "PEPPERONI",
-      "sizes": [ 20, 30, 45],
-      "description": "",
+      "description": "Tomato sauce, pepperoni, cheese",
+      "image": "https://i.imgur.com/4VHrSy5.jpg",
       "vegan": false,
+      "prices": {
+        "30": {
+          "euro": 5.83,
+          "dollar": 6.94
+        },
+        "45": {
+          "euro": 7.5,
+          "dollar": 8.41
+        }
+      },
       "hot": false
     },
     {
       "id": 3,
       "title": "BBQ CHICKEN",
-      "sizes": [ 20, 30],
-      "description": "",
+      "description": "Barbecue sauce, chicken breast, bacon, red onions, green pepper, champignons, fried onions, cheese",
+      "image": "https://i.imgur.com/7ajUZ2R.jpg",
       "vegan": false,
+      "prices": {
+        "20": {
+          "euro": 4.54,
+          "dollar": 5.94
+        },
+        "30": {
+          "euro": 5.83,
+          "dollar": 6.94
+        }
+      },
       "hot": false
     },
     {
       "id": 4,
       "title": "DIAVOLA",
-      "sizes": [30],
-      "description": "",
+      "description": "Tomato sauce, ham, pepperoni, jalapeno, cheese",
+      "image": "https://i.imgur.com/A0lHesV.png",
       "vegan": false,
+      "prices": {
+        "30": {
+          "euro": 5.83,
+          "dollar": 6.94
+        }
+      },
       "hot": true
     },
     {
       "id": 5,
       "title": "FUNGHI",
-      "sizes": [30],
-      "description": "",
+      "description": "Tomato sauce, champignons, cheese",
+      "image": "https://i.imgur.com/rHOBzfM.jpg",
       "vegan": true,
+      "prices": {
+        "20": {
+          "euro": 4.54,
+          "dollar": 5.94
+        },
+        "30": {
+          "euro": 5.83,
+          "dollar": 6.94
+        }
+      },
       "hot": false
     }
   ]

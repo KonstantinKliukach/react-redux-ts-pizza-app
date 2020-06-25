@@ -10,6 +10,15 @@ const User: React.FC = () => {
   return (
     <Flex
       alignItems='center'
+      sx={{
+        cursor: 'pointer',
+        '&:hover': {
+          color: 'var(--color-active)',
+          svg: {
+            fill: 'var(--color-active)',
+          },
+        },
+      }}
     >
       <UserPic width={'25px'} height='25px' fillOpacity={1} fill={'var(--text-color)'} />
       <Text fontSize='18px' ml='8px' fontWeight='bold'>

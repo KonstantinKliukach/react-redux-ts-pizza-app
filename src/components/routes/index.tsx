@@ -5,11 +5,12 @@ import {
   Redirect,
 } from 'react-router-dom';
 import Page404 from 'components/404';
+import Pizza from 'components/pizza';
 
 const AppRoutes: React.FC = () => (
   <Switch>
     <Route exact path='/'>
-      <div>Main</div>
+      <Pizza />
     </Route>
     <Route path='/cart'>
       <div>Cart</div>
