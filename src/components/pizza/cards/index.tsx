@@ -5,7 +5,8 @@ import { Box, Image, Text, Flex, Button } from 'rebass';
 import { ReactComponent as ReactHot } from 'assets/icons/card/hot.svg';
 import { ReactComponent as ReactVegan } from 'assets/icons/card/vegan.svg';
 import { getCurrencyState, Currency } from 'context/redux/reducers/currency';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart } from 'context/redux/actions/cart';
 import Sizes from './sizes';
 
 interface Card {
@@ -14,12 +15,21 @@ interface Card {
 
 const Card:React.FC<Card> = ({ pizza }) => {
   const sizes = Object.keys(pizza.prices);
-  const [size, setSize] = useState(sizes[0]);
+  const [size, setSize] = useState((sizes[0]));
+
+  const dispatch = useDispatch();
 
   const { currency } = useSelector(getCurrencyState);
 
   const handleSizeSelect = (sizeSelected: string): void => {
     setSize(sizeSelected);
+  };
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({
+      id: pizza.id,
+      size: Number(size),
+    }));
   };
 
   const price = `${pizza.prices[size][currency]} ${currency === Currency.dollar ? '$' : '€'}`;
@@ -65,6 +75,7 @@ const Card:React.FC<Card> = ({ pizza }) => {
           <Flex justifyContent='space-between' alignItems='center' mt='12px'>
             <Sizes onClick={handleSizeSelect} sizeSelected={size} sizes={sizes}/>
             <Button
+              onClick={handleAddToCart}
               ml='auto'
               backgroundColor='var(--color-active)'
               sx={{

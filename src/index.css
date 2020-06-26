@@ -9,7 +9,7 @@ body {
   --text-color: #f0F0F0;
   --text-color-secondary: #111111;
   --color-primary: #0A0A0A;
-  --color-secondary: rgba(230, 230, 255, 0.07);
+  --color-secondary: #19191B;
   --color-active: #ff6f22;
   --color-hover: rgba(191, 75, 13, 1);
 }
@@ -18,7 +18,7 @@ body {
   --text-color: #111111;
   --text-color-secondary: #f0F0F0;
   --color-primary: #FAFAFA;
-  --color-secondary:rgba(0, 0, 0, 0.04);
+  --color-secondary:#F0F0F0;
   --color-active: rgb(74, 210, 149);
   --color-hover: rgba(25, 142, 90, 1);
 }

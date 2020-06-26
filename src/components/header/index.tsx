@@ -4,7 +4,7 @@ import { Flex, Box } from 'rebass';
 import useTheme from 'hooks/useTheme';
 
 import Logo from './logo';
-import User from './user';
+// import User from './user';
 import Cart from './cart';
 import ThemeSwitcher from './themeSwitcher';
 import CurrencySwitcher from './currencySwitcher';
@@ -34,9 +34,13 @@ const Header: React.FC = () => {
         <Box ml='12px'>
           <Cart />
         </Box>
-        <Box ml='12px' >
-          <User />
-        </Box>
+        {
+          /*
+            <Box ml='12px' >
+              <User />
+            </Box>
+          */
+        }
       </Flex>
     </Flex>
   );

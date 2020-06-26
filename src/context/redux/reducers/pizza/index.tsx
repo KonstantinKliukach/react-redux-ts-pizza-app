@@ -17,8 +17,12 @@ export interface Pizza {
   prices: {[key: string]: Prices},
 }
 
+export interface Pizzas {
+  [key: number]: Pizza
+}
+
 interface PizzaState {
-  pizzas: Pizza[] | null,
+  pizzas: Pizzas | null,
   isLoading: boolean,
 }
 

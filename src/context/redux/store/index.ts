@@ -8,6 +8,7 @@ import themeReducer from 'context/redux/reducers/theme';
 import authReducer from 'context/redux/reducers/auth';
 import pizzaReducer from 'context/redux/reducers/pizza';
 import currencyReducer from 'context/redux/reducers/currency';
+import cartReducer from 'context/redux/reducers/cart';
 
 const composeEnhancers = composeWithDevTools({});
 
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
   pizza: pizzaReducer,
   currency: currencyReducer,
+  cart: cartReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

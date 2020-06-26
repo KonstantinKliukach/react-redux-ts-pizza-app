@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 import { RootState } from 'context/redux/store';
-import { Pizza } from 'context/redux/reducers/pizza';
+import { Pizza, Pizzas } from 'context/redux/reducers/pizza';
 
 export const PIZZA_REQUEST = 'PIZZA_REQUEST';
 export const PIZZA_SUCCESS = 'PIZZA_SUCCESS';
@@ -11,7 +11,7 @@ export type PizzaRequestAction = Action<typeof PIZZA_REQUEST>
 
 export interface PizzaSuccessAction extends Action<typeof PIZZA_SUCCESS> {
   payload: {
-    pizzas: Pizza[],
+    pizzas: Pizzas,
   }
 }
 
@@ -34,7 +34,10 @@ PizzaActions
   });
   try {
     const response = await fetch('http://localhost:3001/pizzas');
-    const pizzas: Pizza[] = await response.json();
+    const pizzasRaw: Pizza[] = await response.json();
+    const pizzas: Pizzas = {};
+    // eslint-disable-next-line no-return-assign
+    pizzasRaw.forEach((pizza) => pizzas[pizza.id] = pizza);
     dispatch({
       type: PIZZA_SUCCESS,
       payload: { pizzas },

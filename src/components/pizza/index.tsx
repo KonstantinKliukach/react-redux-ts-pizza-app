@@ -21,10 +21,8 @@ const Pizza: React.FC = () => {
   return (
     <Flex flexWrap='wrap' flex={1}>
       {
-        pizzas && pizzas.map((pizza) => <Card key={pizza.id} pizza={pizza} />)
-      }
-      {
-        pizzas && pizzas.map((pizza) => <Card key={pizza.id} pizza={pizza} />)
+        pizzas
+          && Object.keys(pizzas).map((pizza) => <Card key={pizza} pizza={pizzas[Number(pizza)]} />)
       }
     </Flex>
   );
