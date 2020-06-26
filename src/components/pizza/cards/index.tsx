@@ -35,16 +35,17 @@ const Card:React.FC<Card> = ({ pizza }) => {
   const price = `${pizza.prices[size][currency]} ${currency === Currency.dollar ? '$' : '€'}`;
   return (
     <Flex
+      flexShrink={1}
       flexDirection='column'
       m='12px'
       p='12px'
       sx={{
         backgroundColor: 'var(--color-secondary)',
         borderRadius: '12px',
-        width: '30%',
+        width: '320px',
       }}
     >
-      <Box backgroundColor='white' sx={{ borderRadius: '12px 12px 0px 0px' }}>
+      <Box sx={{ borderRadius: '12px 12px 0px 0px', flexShrink: '0' }} >
         <Image
           width={'100%'}
           maxHeight='180px'

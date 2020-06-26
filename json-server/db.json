@@ -1,25 +1,11 @@
 {
-  "orders": [
-    {
-      "user": {
-        "name": "Алевтина",
-        "address": "Замена стекла",
-        "phone": "123"
-      },
-      "cart": {
-        "1": {
-          "45": 1
-        }
-      },
-      "id": 1
-    }
-  ],
+  "orders": [],
   "pizzas": [
     {
       "id": 1,
       "title": "4 CHEESE",
       "description": "Tomato sauce, mozzarella and cheddar cheeses, blue cheese and hard cheese",
-      "image": "https://i.imgur.com/cdzHA3w.jpg",
+      "image": "https://i.imgur.com/x4XZ1hX.png",
       "vegan": true,
       "prices": {
         "20": {
@@ -41,7 +27,7 @@
       "id": 2,
       "title": "PEPPERONI",
       "description": "Tomato sauce, pepperoni, cheese",
-      "image": "https://i.imgur.com/4VHrSy5.jpg",
+      "image": "https://i.imgur.com/iatR7PV.png",
       "vegan": false,
       "prices": {
         "30": {
@@ -59,7 +45,7 @@
       "id": 3,
       "title": "BBQ CHICKEN",
       "description": "Barbecue sauce, chicken breast, bacon, red onions, green pepper, champignons, fried onions, cheese",
-      "image": "https://i.imgur.com/7ajUZ2R.jpg",
+      "image": "https://i.imgur.com/E1xZ2hd.png",
       "vegan": false,
       "prices": {
         "20": {
@@ -77,7 +63,7 @@
       "id": 4,
       "title": "DIAVOLA",
       "description": "Tomato sauce, ham, pepperoni, jalapeno, cheese",
-      "image": "https://i.imgur.com/A0lHesV.png",
+      "image": "https://i.imgur.com/UCIexwT.png",
       "vegan": false,
       "prices": {
         "30": {
@@ -91,7 +77,7 @@
       "id": 5,
       "title": "FUNGHI",
       "description": "Tomato sauce, champignons, cheese",
-      "image": "https://i.imgur.com/rHOBzfM.jpg",
+      "image": "https://i.imgur.com/5Rvgoln.png",
       "vegan": true,
       "prices": {
         "20": {
