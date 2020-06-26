@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getPizzaState } from 'context/redux/reducers/pizza';
 import { loadPizzas } from 'context/redux/actions/pizza';
 import { Flex } from 'rebass';
+import Menu from 'components/menu';
 import Card from './cards';
 
 const Pizza: React.FC = () => {
@@ -13,18 +14,21 @@ const Pizza: React.FC = () => {
     if (!pizzas) {
       dispatch(loadPizzas());
     }
-  }, []);
+  }, [dispatch, pizzas]);
 
   if (isLoading) {
     return <span>loading...</span>;
   }
   return (
-    <Flex flexWrap='wrap' flex={1}>
-      {
-        pizzas
-          && Object.keys(pizzas).map((pizza) => <Card key={pizza} pizza={pizzas[Number(pizza)]} />)
-      }
-    </Flex>
+    <>
+      <Menu />
+      <Flex flexWrap='wrap' flex={1}>
+        {
+          pizzas
+            && Object.keys(pizzas).map((pizza) => <Card key={pizza} pizza={pizzas[Number(pizza)]} />)
+        }
+      </Flex>
+    </>
   );
 };
 

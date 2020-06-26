@@ -15,7 +15,6 @@ const Mainlayout: React.FC = (props) => (
   >
     <Header />
     <Flex mt='20px' flex={1}>
-      <Menu />
       {props.children}
     </Flex>
     <Footer />

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Flex } from 'rebass';
 
 import Modal from 'components/modal';
-import Steps from './steps';
+import { useHistory } from 'react-router-dom';
 import Submit from './submit';
 import Confirmation from './confirmation';
 
@@ -12,20 +12,10 @@ interface CartModal {
   handleClose: () => void
 }
 
-const steps = ['Confirmation', 'Delivery', 'Review'];
-
 const CartModal: React.FC<CartModal> = ({ sum, isOpen, handleClose }) => {
-  const [stage, setStage] = useState(steps[0]);
-
+  const history = useHistory();
   const handleNext = () => {
-    const nextStage = steps.indexOf(stage) + 1;
-    if (!nextStage) {
-      return;
-    }
-    if (nextStage < steps.length) {
-      setStage(steps[nextStage]);
-      return;
-    }
+    history.push('/order');
     handleClose();
   };
 
@@ -44,14 +34,11 @@ const CartModal: React.FC<CartModal> = ({ sum, isOpen, handleClose }) => {
           position: 'relative',
         }}
       >
-        <Steps active={stage} steps={steps}/>
         <Confirmation />
         <Submit
           onSubmit={handleNext}
           sum={sum}
-          label={
-            steps.length === steps.indexOf(stage) + 1 ? 'Submit' : 'Next'
-          }
+          label={'Next'}
         />
       </Flex>
     </Modal>

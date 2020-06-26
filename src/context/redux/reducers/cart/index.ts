@@ -1,5 +1,5 @@
 import { Reducer } from 'react';
-import { CartActions, ADD_TO_CART, DELETE_FROM_CART, CartPayload } from 'context/redux/actions/cart';
+import { CartActions, ADD_TO_CART, DELETE_FROM_CART, CartPayload, CLEAR_CART } from 'context/redux/actions/cart';
 import { RootState } from 'context/redux/store';
 
 type quantity = number;
@@ -55,6 +55,9 @@ const reducer: Reducer<
     }
     case DELETE_FROM_CART: {
       return deleteFromCart(action.payload, state);
+    }
+    case CLEAR_CART: {
+      return { ...initialState };
     }
     default:
       return state;

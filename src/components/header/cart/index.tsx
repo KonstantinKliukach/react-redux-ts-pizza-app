@@ -14,7 +14,7 @@ const Cart: React.FC = () => {
   const { currency } = useSelector(getCurrencyState);
 
   const [sum, setSum] = useState(0);
-  const [isModalOpened, setIsModalOpened] = useState(true);
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
   const calculateSum = () => {
     if (!pizzas || !total) {

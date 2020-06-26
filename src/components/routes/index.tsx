@@ -2,21 +2,22 @@ import React from 'react';
 import {
   Route,
   Switch,
-  Redirect,
 } from 'react-router-dom';
 import Page404 from 'components/404';
 import Pizza from 'components/pizza';
+import Order from 'components/order';
+import Success from 'components/success';
 
 const AppRoutes: React.FC = () => (
   <Switch>
     <Route exact path='/'>
       <Pizza />
     </Route>
-    <Route path='/cart'>
-      <div>Cart</div>
+    <Route path='/order'>
+      <Order />
     </Route>
-    <Route path='/user/:id'>
-      <div>Orders</div>
+    <Route path='/success/:id'>
+      <Success />
     </Route>
     <Page404 />
   </Switch>
