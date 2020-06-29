@@ -1,6 +1,6 @@
 # react-redux-ts-pizza-app
 
-[a link](https://react-redux-ts-pizza-app.herokuapp.com)
+[This app demo on Heroku](https://react-redux-ts-pizza-app.herokuapp.com)
 
 Small app for ordering pizza.
 
