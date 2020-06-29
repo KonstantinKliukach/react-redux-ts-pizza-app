@@ -37,7 +37,7 @@ AuthActions
     type: AUTH_REQUEST,
   });
   try {
-    const response = await fetch('http://localhost:3001/signin', {
+    const response = await fetch(`${process.env.REACT_APP_API}/signin`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

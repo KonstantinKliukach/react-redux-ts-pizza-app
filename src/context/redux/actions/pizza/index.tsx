@@ -33,7 +33,7 @@ PizzaActions
     type: PIZZA_REQUEST,
   });
   try {
-    const response = await fetch('http://localhost:3001/pizzas');
+    const response = await fetch(`${process.env.REACT_APP_API}/pizzas`);
     const pizzasRaw: Pizza[] = await response.json();
     const pizzas: Pizzas = {};
     // eslint-disable-next-line no-return-assign

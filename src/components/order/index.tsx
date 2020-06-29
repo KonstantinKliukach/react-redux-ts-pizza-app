@@ -38,7 +38,7 @@ const Order: React.FC = () => {
       cart,
     };
     try {
-      const response = await fetch('http://localhost:3001/orders', {
+      const response = await fetch(`${process.env.REACT_APP_API}/orders`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
