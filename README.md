@@ -1,5 +1,7 @@
 # react-redux-ts-pizza-app
 
+[a link](https://react-redux-ts-pizza-app.herokuapp.com)
+
 Small app for ordering pizza.
 
 Made with React/Redux + Typescript
